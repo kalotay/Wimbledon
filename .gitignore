@@ -1,0 +1,17 @@
+#resharper
+/_ReSharper.*/*
+/_ReSharper.*/**/*
+/*.resharper.user
+
+#binaries
+/*.suo
+/**/obj
+/**/obj/*
+/**/obj/**/*
+/**/bin
+/**/bin/* 
+/**/bin/**/*
+
+*.user
+
+packages/*
