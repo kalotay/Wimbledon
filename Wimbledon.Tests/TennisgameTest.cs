@@ -51,7 +51,7 @@ namespace Wimbledon.Tests
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Fifteen-All"));
         }
-        /*
+        
         [Test]
         public void TestServerScoresTwiceThenScoreIsThirtyLove()
         {
@@ -60,6 +60,7 @@ namespace Wimbledon.Tests
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Thirty-Love"));
         }
+        /*
         [Test]
         public void TestBothPlayersScoresTwiceThenScoreIsThirtyAll()
         {
