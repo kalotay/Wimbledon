@@ -18,13 +18,14 @@ namespace Wimbledon.Tests
         {
             Assert.That(_game, Is.Not.Null);
         }
-/*
+
         [Test]
         public void TestInitialScoreIsLoveAll()
         {
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Love-All"));
         }
+        /*
         [Test]
         public void TestServerScoresThenScoreIsFifteenLove()
         {
