@@ -60,7 +60,7 @@ namespace Wimbledon.Tests
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Thirty-Love"));
         }
-        /*
+
         [Test]
         public void TestBothPlayersScoresTwiceThenScoreIsThirtyAll()
         {
@@ -129,7 +129,7 @@ namespace Wimbledon.Tests
                 _game = _game.ScoreReciever();
             }
             var winner = _game.GetWinner();
-            Assert.That(winner, Is.EqualTo("Reciever"));
+            Assert.That(winner, Is.EqualTo("Receiver"));
         }
         [Test]
         public void TestInitialWinnerIsNull()
@@ -192,6 +192,6 @@ namespace Wimbledon.Tests
             _game = _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Advantage Out"));
-        } */
+        } 
     }
 }

@@ -30,5 +30,22 @@ namespace Wimbledon
             NextState(Scorer.Receiver);
             return this;
         }
+
+        public string GetWinner()
+        {
+            var gameState = _currentState.GetType();
+
+            if (gameState == typeof(GameIn))
+            {
+                return "Server";
+            }
+
+            if (gameState == typeof(GameOut))
+            {
+                return "Receiver";
+            }
+
+            return null;
+        }
     }
 }
