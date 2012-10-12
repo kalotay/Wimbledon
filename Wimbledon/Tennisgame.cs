@@ -14,10 +14,9 @@ namespace Wimbledon
             return _currentState.ToString();
         }
 
-        public Tennisgame ScoreServer()
+        public void ScoreServer()
         {
             NextState(Scorer.Server);
-            return this;
         }
 
         private void NextState(Scorer scorer)
@@ -25,10 +24,9 @@ namespace Wimbledon
             _currentState = _currentState.Next(scorer);
         }
 
-        public Tennisgame ScoreReciever()
+        public void ScoreReciever()
         {
             NextState(Scorer.Receiver);
-            return this;
         }
 
         public string GetWinner()

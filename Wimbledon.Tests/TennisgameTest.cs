@@ -29,7 +29,7 @@ namespace Wimbledon.Tests
         [Test]
         public void TestServerScoresThenScoreIsFifteenLove()
         {
-            _game = _game.ScoreServer();
+            _game.ScoreServer();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Fifteen-Love"));
         }
@@ -38,7 +38,7 @@ namespace Wimbledon.Tests
         [Test]
         public void TestRecieverScoresThenScoreIsLoveFifteen()
         {
-            _game = _game.ScoreReciever();
+            _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Love-Fifteen"));
         }
@@ -46,8 +46,8 @@ namespace Wimbledon.Tests
         [Test]
         public void TestBothPlayersScoresThenScoreIsFifteenAll()
         {
-            _game = _game.ScoreServer();
-            _game = _game.ScoreReciever();
+            _game.ScoreServer();
+            _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Fifteen-All"));
         }
@@ -55,8 +55,8 @@ namespace Wimbledon.Tests
         [Test]
         public void TestServerScoresTwiceThenScoreIsThirtyLove()
         {
-            _game = _game.ScoreServer();
-            _game = _game.ScoreServer();
+            _game.ScoreServer();
+            _game.ScoreServer();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Thirty-Love"));
         }
@@ -64,19 +64,19 @@ namespace Wimbledon.Tests
         [Test]
         public void TestBothPlayersScoresTwiceThenScoreIsThirtyAll()
         {
-            _game = _game.ScoreServer();
-            _game = _game.ScoreServer();
-            _game = _game.ScoreReciever();
-            _game = _game.ScoreReciever();
+            _game.ScoreServer();
+            _game.ScoreServer();
+            _game.ScoreReciever();
+            _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Thirty-All"));
         }
         [Test]
         public void TestRecieverScoresThreeTimesThenScoreIsLoveForty()
         {
-            _game = _game.ScoreReciever();
-            _game = _game.ScoreReciever();
-            _game = _game.ScoreReciever();
+            _game.ScoreReciever();
+            _game.ScoreReciever();
+            _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Love-Forty"));
         }
@@ -85,8 +85,8 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 3; ++i)
             {
-                _game = _game.ScoreServer();
-                _game = _game.ScoreReciever();
+                _game.ScoreServer();
+                _game.ScoreReciever();
             }
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Deuce"));
@@ -96,7 +96,7 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 4; i++)
             {
-                _game = _game.ScoreServer();
+                _game.ScoreServer();
             }
             var winner = _game.GetWinner();
             Assert.That(winner, Is.EqualTo("Server"));
@@ -106,7 +106,7 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 4; i++)
             {
-                _game = _game.ScoreServer();
+                _game.ScoreServer();
             }
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Game"));
@@ -116,7 +116,7 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 4; i++)
             {
-                _game = _game.ScoreReciever();
+                _game.ScoreReciever();
             }
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Game"));
@@ -126,7 +126,7 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 4; i++)
             {
-                _game = _game.ScoreReciever();
+                _game.ScoreReciever();
             }
             var winner = _game.GetWinner();
             Assert.That(winner, Is.EqualTo("Receiver"));
@@ -142,17 +142,17 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 4; i++)
             {
-                _game = _game.ScoreReciever();
+                _game.ScoreReciever();
             }
-            _game = _game.ScoreServer();
+            _game.ScoreServer();
         }
         [Test]
         public void TestBothPlayersScoresFourTimesThenScoreIsDeuce()
         {
             for (var i = 0; i < 4; ++i)
             {
-                _game = _game.ScoreServer();
-                _game = _game.ScoreReciever();
+                _game.ScoreServer();
+                _game.ScoreReciever();
             }
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Deuce"));
@@ -162,10 +162,10 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 3; ++i)
             {
-                _game = _game.ScoreServer();
-                _game = _game.ScoreReciever();
+                _game.ScoreServer();
+                _game.ScoreReciever();
             }
-            _game = _game.ScoreServer();
+            _game.ScoreServer();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Advantage In"));
         }
@@ -174,10 +174,10 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 3; ++i)
             {
-                _game = _game.ScoreServer();
-                _game = _game.ScoreReciever();
+                _game.ScoreServer();
+                _game.ScoreReciever();
             }
-            _game = _game.ScoreServer();
+            _game.ScoreServer();
             var winner = _game.GetWinner();
             Assert.That(winner, Is.Null);
         }
@@ -186,10 +186,10 @@ namespace Wimbledon.Tests
         {
             for (var i = 0; i < 3; ++i)
             {
-                _game = _game.ScoreServer();
-                _game = _game.ScoreReciever();
+                _game.ScoreServer();
+                _game.ScoreReciever();
             }
-            _game = _game.ScoreReciever();
+            _game.ScoreReciever();
             var score = _game.GetCurrentScore();
             Assert.That(score, Is.EqualTo("Advantage Out"));
         } 
