@@ -1,6 +1,6 @@
-namespace Wimbledon
+namespace Wimbledon.States
 {
-    public class ThirtyForty : NonTerminalGameState
+    public class AdvantageOut : NonTerminalGameState
     {
         protected override IGameState ServerScore()
         {
@@ -10,6 +10,11 @@ namespace Wimbledon
         protected override IGameState ReceiverScore()
         {
             return new GameOut();
+        }
+
+        public override string ToString()
+        {
+            return "Advantage Out";
         }
     }
 }

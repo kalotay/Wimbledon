@@ -1,15 +1,15 @@
-namespace Wimbledon
+namespace Wimbledon.States
 {
-    public class FortyLove : NonTerminalGameState
+    public class FifteenForty : NonTerminalGameState
     {
         protected override IGameState ServerScore()
         {
-            return new GameIn();
+            return new ThirtyForty();
         }
 
         protected override IGameState ReceiverScore()
         {
-            return new FortyFifteen();
+            return new GameOut();
         }
     }
 }

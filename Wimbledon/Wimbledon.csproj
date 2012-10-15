@@ -39,31 +39,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deuce.cs" />
-    <Compile Include="FifteenAll.cs" />
-    <Compile Include="FifteenForty.cs" />
-    <Compile Include="FifteenLove.cs" />
-    <Compile Include="FifteenThirty.cs" />
-    <Compile Include="FortyFifteen.cs" />
-    <Compile Include="FortyLove.cs" />
-    <Compile Include="FortyThirty.cs" />
     <Compile Include="IGameState.cs" />
-    <Compile Include="LoveAll.cs" />
-    <Compile Include="LoveFifteen.cs" />
-    <Compile Include="LoveForty.cs" />
-    <Compile Include="LoveThirty.cs" />
     <Compile Include="NonTerminalGameState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AdvantageOut.cs" />
-    <Compile Include="GameOut.cs" />
     <Compile Include="Scorer.cs" />
-    <Compile Include="AdvantageIn.cs" />
-    <Compile Include="GameIn.cs" />
+    <Compile Include="States\AdvantageIn.cs" />
+    <Compile Include="States\AdvantageOut.cs" />
+    <Compile Include="States\Deuce.cs" />
+    <Compile Include="States\FifteenAll.cs" />
+    <Compile Include="States\FifteenForty.cs" />
+    <Compile Include="States\FifteenLove.cs" />
+    <Compile Include="States\FifteenThirty.cs" />
+    <Compile Include="States\FortyFifteen.cs" />
+    <Compile Include="States\FortyLove.cs" />
+    <Compile Include="States\FortyThirty.cs" />
+    <Compile Include="States\GameIn.cs" />
+    <Compile Include="States\GameOut.cs" />
+    <Compile Include="States\LoveAll.cs" />
+    <Compile Include="States\LoveFifteen.cs" />
+    <Compile Include="States\LoveForty.cs" />
+    <Compile Include="States\LoveThirty.cs" />
+    <Compile Include="States\ThirtyAll.cs" />
+    <Compile Include="States\ThirtyFifteen.cs" />
+    <Compile Include="States\ThirtyForty.cs" />
+    <Compile Include="States\ThirtyLove.cs" />
     <Compile Include="Tennisgame.cs" />
-    <Compile Include="ThirtyAll.cs" />
-    <Compile Include="ThirtyFifteen.cs" />
-    <Compile Include="ThirtyForty.cs" />
-    <Compile Include="ThirtyLove.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

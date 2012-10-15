@@ -1,8 +1,8 @@
 using System;
 
-namespace Wimbledon
+namespace Wimbledon.States
 {
-    public class GameOut : IGameState
+    public class GameIn : IGameState
     {
         public IGameState Next(Scorer scorer)
         {

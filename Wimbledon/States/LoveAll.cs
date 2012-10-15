@@ -1,4 +1,4 @@
-namespace Wimbledon
+namespace Wimbledon.States
 {
     public class LoveAll : NonTerminalGameState
     {
